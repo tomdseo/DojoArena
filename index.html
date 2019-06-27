@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div id="arena-select">
+            <h1>Select Arena</h1>
+
+            <select name="" id="first">
+                <option value="">Select Ninja</option>
+                <option value="donny">Donny</option>
+                <option value="mikey">Mikey</option>
+                <option value="leo">Leo</option>
+                <option value="raphael">Raphael</option>
+            </select>
+
+            <select name="" id="second">
+                <option value="">Select Ninja</option>
+                <option value="donny">Donny</option>
+                <option value="mikey">Mikey</option>
+                <option value="leo">Leo</option>
+                <option value="raphael">Raphael</option>
+            </select>
+
+            <button id="beach">beach</button>
+            <button id="planet">planet</button>
+            <button id="dojo">dojo</button>
+            <button id="forest">forest</button>
+            <button id="matrix">matrix</button>
+            <button id="snow">snow</button>
+        </div>
+
+         <div id="char1"></div>
+        <div id="char2"></div>
+
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#arena-select select").hide();
+            $('#arena-select button').hover(function () {
+                var source = ($(this).attr("id"));
+                $('#wrapper').css("background-image", `url("imgs/${source}.jpg")`);
+            });
+
+            function setHeading() {
+                $('#arena-select h1').text("Select Players");
+                $('#arena-select button').hide();
+                $('arena-select').html("<select><option>Select Player</option><option>Leo</option><option>Donny</option><option>Raphael</option><option>Mikey</option></select>")
+                $("#arena-select select").show();
+                $( '#arena-select').css("background-color", "rgba(255, 255, 255, 0.5)")
+            }
+            $('#arena-select button').click(function () {
+                var source = $(this).val();
+                $('#wrapper').css("background-image", `url("imgs/${source}.jpg")`);
+                console.log(source)
+                setHeading();
+            });
+
+            $("#first").on("click", function () {
+                var ninjaTurtle = ($(this).val());
+                ninjaTurtle.toLowerCase();
+                $('#char1').css("background-image", `url("imgs/${ninjaTurtle}.png")`);
+            });
+
+            $("#second").on("click", function () {
+                var ninjaTurtle = ($(this).val());
+                ninjaTurtle.toLowerCase();
+                $('#char2').css("background-image", `url("imgs/${ninjaTurtle}.png")`);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

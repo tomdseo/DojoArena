@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: white;
+    width: auto;
+    height: 600px;
+    padding: 35px 30px;
+}
+
+#wrapper {
+    background-color: black;
+    border: 10px solid grey;
+    align-content: center;
+    width: 960px;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+#arena-select {
+    background-color: grey;
+    border: 5px solid darkgrey;
+    align-content: center;
+    width: 320px;
+    height: 160px;
+    margin: 140px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#arena-select button {
+    width: 80px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+h1 {
+    color: orange;
+    text-shadow: 3px 1px white;
+    margin-top: 20px;
+}
+
+select#first{
+    position: relative;
+    left: -10px;
+    top: 5px;
+    display: inline;
+}
+
+select#second{
+    position: relative;
+     left: 0px;
+     top: 5px;
+    display: inline;
+}
+
+#char1 {
+    left: 86px;
+    top: -239px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 390px;
+    width: 240px;
+    display: inline-block;
+}
+
+#char2 {
+    left: 416px;
+    top: -231px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 390px;
+    width: 240px;
+    display: inline-block;
+}
+
+
+
